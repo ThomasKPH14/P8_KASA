@@ -1,13 +1,14 @@
-import Home from './components/routes';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
+import './styles/index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
+    <p>Hello! What's the fuck, do you work very hardly?</p>
+    <p>Do you know ADRIAAAAANE?</p>
     <App />
   </React.StrictMode>
 );

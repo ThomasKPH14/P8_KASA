@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 // Import des pages
 import Home from '../../pages/Home';
@@ -10,12 +10,12 @@ import About from '../../pages/About';
 const AppRouter = () => {
   return (
     <Router>
-      <Switch>
+      <Routes>
         <Route exact path="/" component={Home} />
         <Route path="/about" component={About} />
         <Route path="/housing" component={Housing} />
         <Route component={Error404} />
-      </Switch>
+      </Routes>
     </Router>
   );
 };
