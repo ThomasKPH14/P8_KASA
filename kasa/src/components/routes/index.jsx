@@ -1,21 +1,26 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
-// Import des pages
+// Import-Pages
 import Home from '../../pages/Home';
 import Housing from '../../pages/Housing';
 import Error404 from '../../pages/Error404';
 import About from '../../pages/About';
+import Navbar from '../../components/NavBar';
+import Footer from '../../components/Footer';
+
 
 const AppRouter = () => {
   return (
     <Router>
+      <Navbar /> {/* Composant Navbar */}
       <Routes>
-        <Route exact path="/" component={Home} />
-        <Route path="/about" component={About} />
-        <Route path="/housing" component={Housing} />
-        <Route component={Error404} />
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/housing" element={<Housing />} />
+        <Route path="*" element={<Error404 />} />
       </Routes>
+      <Footer /> {/* Composant Footer */}
     </Router>
   );
 };
