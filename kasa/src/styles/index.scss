@@ -1,5 +1,9 @@
+@import './Utils/animation.scss';
 @import './Components/navbar';
 @import './Components/banner';
+@import './Components/collapse';
 @import './Layouts/homegallery';
 @import './Layouts/body';
-@import './Components/fotter';
+@import './Components/footer';
+@import './Pages/about';
+@import './Layouts/404';

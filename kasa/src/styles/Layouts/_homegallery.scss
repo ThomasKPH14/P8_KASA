@@ -1,8 +1,7 @@
 .container-product {
     margin-left: 14px;
     margin-right: 11px;
-    display: inline-flex;
-    flex-direction: column;
+    // flex-direction: column;
     position: relative;
   
     &__overlay {
@@ -33,7 +32,7 @@
       font-size: 18px;
       top: 199px;
       left: 16px;
-      font-family: Montserrat;
+      font-family: 'Montserrat', sans-serif;
     }
   }
   

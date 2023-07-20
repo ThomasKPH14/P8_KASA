@@ -8,16 +8,18 @@
   .navbar-container {
     margin-top: 14px;
     margin-left: 14px;
-    font-family: Montserrat;
+    font-family: 'Montserrat', sans-serif;
     display: flex;
     justify-content: space-between;
-    align-items: flex-start; 
+    align-items: flex-start;
+    margin-right: 6px;
     
     & > .navbar-nav {
       display: flex;
       list-style-type: none;
       margin-top: 0;
       margin-bottom: 0;
+      
       
       & > .navbar-item {
         width: 75px;

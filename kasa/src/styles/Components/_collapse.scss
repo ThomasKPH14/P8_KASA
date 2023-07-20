@@ -1,0 +1,79 @@
+.accordion {
+    font-family: 'Montserrat', sans-serif;
+    margin: auto;
+    width: 91%;
+    margin-bottom: 25px;
+
+    &__title {
+        font-size: 13px;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 30px;
+        width: 100%;
+        background-color: #FF6060;
+        border-radius: 3px;
+        border-style: none;
+        cursor: pointer;
+        margin-top: 25px;
+        padding: 10px;
+        
+        
+        & span {
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center;            
+            background-image: url(../../assets/arrow_back_2.png);
+            text-align: center;
+            height: 25px;
+            width: 25px;
+            transform: rotate(0deg);
+            transform-origin: center;
+            transition: transform 0.3s cubic-bezier(0.455, 0.030, 0.515, 0.955);
+            
+        }
+    }
+
+    &__content {
+        font-size: 12px;
+        color: #FF6060;
+        background-color: #F6F6F6;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        margin-top: 0;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-left: 10px;
+        padding-right: 10px;
+        display: none;
+        line-height: 19px;
+    
+    }
+
+}
+
+// Animation 
+.expanded {
+  &__title {
+      margin-top: 0;
+  }
+
+  & span {
+    transform: rotate(-180deg);
+    transform-origin: center;
+    transition: transform 0.3s cubic-bezier(0.455, 0.030, 0.515, 0.955);
+  }
+
+  & p {
+      display: inline-flex;
+      opacity: 0;
+      transform: scaleY(0);
+      transform-origin: top;
+      animation: Drop 0.2s forwards;
+  }
+}
+
+
+
+  

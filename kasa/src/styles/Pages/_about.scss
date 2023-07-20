@@ -1,0 +1,25 @@
+.about-page__banner .banner {
+    background-image: url('/assets/AboutBanner.png');
+    background-size: cover;
+    margin: auto;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    width: 91%;
+    height: 223px;
+   }
+  
+  .about-page .banner::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 99%;
+    background-color: black;
+    border-radius: 10px;
+    opacity: 0.2;
+    z-index: 2;
+  }
+  
+  

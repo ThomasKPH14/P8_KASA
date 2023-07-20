@@ -16,7 +16,7 @@ const AppRouter = () => {
       <Navbar /> {/* Composant Navbar */}
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
+        <Route path="/A-propos" element={<About />} />
         <Route path="/housing" element={<Housing />} />
         <Route path="*" element={<Error404 />} />
       </Routes>

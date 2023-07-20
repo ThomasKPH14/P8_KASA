@@ -1,0 +1,32 @@
+.error-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    gap: 100px;
+    color: #FF6060;
+
+    &__title {
+        font-size: 96px;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 700;
+        margin: 0;
+    }
+
+    &__text {
+        
+        display: flex;
+        text-align: center;
+        font-size: 18px;
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    &__url {
+        text-decoration: underline;
+        color: #FF6060;
+        font-size: 13px;
+        font-family: 'Montserrat', sans-serif;
+        
+    }
+}
