@@ -17,7 +17,7 @@ const AppRouter = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/A-propos" element={<About />} />
-        <Route path="/housing" element={<Housing />} />
+        <Route path="/Fiche-Logement/:id" element={<Housing />} />
         <Route path="*" element={<Error404 />} />
       </Routes>
       <Footer /> {/* Composant Footer */}
