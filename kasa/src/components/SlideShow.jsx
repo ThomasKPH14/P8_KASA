@@ -15,16 +15,15 @@ const Slide = ({ data }) => {
   };
 
   return (
-    <div>
+    <div class="cont-slide-arrow">
       <img src={slides[currentSlide]} alt={data.title} />
-      <p>{data.title}</p>
-      <button onClick={handlePrevClick}>
-        <img src={leftarrow} alt="Left" />
+      <button class="buttonleftarrow" onClick={handlePrevClick}>
+        <img src={leftarrow} alt="Left" className="left-arrow" /> 
       </button>
-      <button onClick={handleNextClick}>
-        <img src={rightarrow} alt="Right" />
+      <button class="buttonrightarrow" onClick={handleNextClick}>
+        <img src={rightarrow} alt="Right" className="right-arrow" /> 
       </button>
-      <p>{`${currentSlide + 1} / ${slides.length}`}</p>
+      <p class="slidenumber">{`${currentSlide + 1} / ${slides.length}`}</p>
     </div>
   );
 };

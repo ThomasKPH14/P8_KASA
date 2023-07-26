@@ -6,6 +6,7 @@ import Ratings from '../components/Rating';
 import Tags from '../components/Tags';
 import Host from '../components/Host';
 import Slide from '../components/SlideShow';
+import Collapse from '../components/Collapse';
 
 function Housing() {
   const { id } = useParams();
@@ -15,28 +16,25 @@ function Housing() {
     return <Error404 />;
   }
 
-  const { title, location, rating, host, equipments, description, tags } = logement; 
+  const { title, location, rating, host, equipments, description, tags } = logement;
 
   return (
     <div className='housing-container'>
-      <h2 className='housing-title'>{title}</h2>
-      <h3 className='housing-location'>{location}</h3>
-      
-      <Slide data={logement} /> 
-
-      <div className='housing-description'>{description}</div>
-      
-      <Host host={host} />
-
-      <Ratings rating={rating} />
-      
-      <ul className='housing-equipments'>
-        {equipments.map((equipment, index) => (
-          <li key={index}>{equipment}</li>
-        ))}
-      </ul>
-
-      <Tags tags={tags} />
+      <Slide data={logement} />
+      <div className='housing-info'>
+        <h2 className='housing-title'>{title}</h2>
+        <h3 className='housing-location'>{location}</h3>
+      </div>
+        <Tags tags={tags} />
+      <div className='housing-host'>
+        <Host host={host} />
+        <Ratings rating={rating} />
+      </div>
+      <div>
+        <Collapse title={'Description'} content={description} />
+        <Collapse title={'Equipements'} content={equipments.map((equipment, index) => (
+          <li key={index}>{equipment}</li>))} />
+      </div>
 
     </div>
   );
