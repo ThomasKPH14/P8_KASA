@@ -31,11 +31,20 @@
 .navbar-container > .navbar-nav > .navbar-item {
   width: 75px;
 }
+.navbar-container > .navbar-nav > .navbar-item > .navbar-link {
+  text-decoration: none;
+  outline: none;
+}
 .navbar-container > .navbar-nav > .navbar-item > .navbar-link h5 {
   font-size: 12px;
   color: #FF6060;
-  text-decoration: underline;
   font-weight: 500;
+}
+.navbar-container > .navbar-nav > .navbar-item > .navbar-link.active h5 {
+  text-decoration: underline;
+}
+.navbar-container > .navbar-nav > .navbar-item > .navbar-link:active h5, .navbar-container > .navbar-nav > .navbar-item > .navbar-link:focus h5, .navbar-container > .navbar-nav > .navbar-item > .navbar-link:hover h5 {
+  text-decoration: underline;
 }
 
 .banner {

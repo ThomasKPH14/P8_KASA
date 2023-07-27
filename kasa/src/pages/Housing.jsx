@@ -33,7 +33,7 @@ function Housing() {
       <div>
         <Collapse title={'Description'} content={description} />
         <Collapse title={'Equipements'} content={equipments.map((equipment, index) => (
-          <li key={index}>{equipment}</li>))} />
+          <li key={equipment}>{equipment}</li>))} />
       </div>
 
     </div>

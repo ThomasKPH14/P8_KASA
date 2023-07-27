@@ -1,40 +1,50 @@
-// Logo
 .logo-image {
-    width: 145px;
-    height: 46.88px;
-    // Responsive
-  }
+  width: 145px;
+  height: 46.88px;
+  // Responsive
+}
 
-  .navbar-container {
-    margin-top: 14px;
-    margin-left: 14px;
-    font-family: 'Montserrat', sans-serif;
+.navbar-container {
+  margin-top: 14px;
+  margin-left: 14px;
+  font-family: 'Montserrat', sans-serif;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-right: 6px;
+  
+  & > .navbar-nav {
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin-right: 6px;
+    list-style-type: none;
+    margin-top: 0;
+    margin-bottom: 0;
     
-    & > .navbar-nav {
-      display: flex;
-      list-style-type: none;
-      margin-top: 0;
-      margin-bottom: 0;
+    & > .navbar-item {
+      width: 75px;
       
-      
-      & > .navbar-item {
-        width: 75px;
+      & > .navbar-link {
+        text-decoration: none;
+        outline: none;
+
+        h5 {
+          font-size: 12px; 
+          color: #FF6060;
+          font-weight: 500;
+        }
         
+        &.active h5 {
+          text-decoration: underline;
+        }
         
-        & > .navbar-link {
+        &:active,
+        &:focus,
+        &:hover {
           h5 {
-            
-            font-size: 12px; 
-            color: #FF6060;
             text-decoration: underline;
-            font-weight: 500;
           }
         }
       }
-      // Responsive
     }
+    // Responsive
   }
+}
