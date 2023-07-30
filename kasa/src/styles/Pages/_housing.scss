@@ -1,182 +1,289 @@
 // Slide 
-.housing-container 
-    
-{
-    
+.housing-container {
+
     margin-top: 20px;
-   
+    margin-left: 14px;
+    margin-right: 14px;
     font-family: 'Montserrat', sans-serif;
-    
-    & li 
-    {
+
+    & li {
         list-style: none;
     }
 
-    & img
-    {
+    & img {
         width: 345px;
         height: 255px;
-        margin-left: 15px;
         border-radius: 10px;
-    }    
-
-    h2{
-        font-size: 18px;
-        font-weight: 500;
-        margin-left: 15px;
-        margin-right: 15px;
-        margin-top: 0px;
     }
 
-    h3 
-    {
+    h2 {
         font-size: 18px;
         font-weight: 500;
-        margin-left: 15px;
+        margin-bottom: 2px;
+    }
+
+    h3 {
+        font-size: 18px;
+        font-weight: 500;
         margin-top: 0px;
         margin-bottom: 0px;
     }
 
-    .host-picture
-    {
+    .host-picture {
         width: 32px;
         height: 32px;
         border-radius: 50%;
         position: relative;
         bottom: 42px;
-        left: 310px;
     }
-    .host-info
-    {
+
+    .host-info {
         display: flex;
         flex-direction: column;
-        width: 20%;
+        height: 32px;
         flex-wrap: nowrap;
-        
-        & p
-        {
-            margin-left: 264px;
+        position: absolute;
+        text-align: end;
+        right: 0px;
+        align-items: flex-end;
+
+        & p {
+            padding-right: 43px;
             margin-top: 6px;
+            width: min-content;
             font-family: 'Montserrat', sans-serif;
             font-size: 12px;
             font-style: normal;
             font-weight: 500;
             color: #FF6060;
         }
-        
+
     }
 
-    .slidenumber
-    {
-        position: relative;
-        bottom: 90px;
-        left: 180px;
-        color: white;
-        font-size: 18px;
-        font-style: normal;
-        font-weight: 500;
+    .slidenumber {
+        display: none;
     }
 
-    
-    .rate img
-    {
-        position: relative;
+
+    .rate img {
         bottom: 70px;
         width: 13px;
         height: 13px;
         left: 10px;
         border-radius: 50%;
-        margin-left: 6px;  
-        
+        margin-left: 6px;
+
     }
-    
-    // .star-active
-    // {
-    //     width: 24.75px;
-    //     height: 24px;
-    // 
 
-    // .start-inactive
-    // {
-    //     width: 24.75px;
-    //     height: 24px;
-    // }
-
-    .cont-slide-arrow
-    {
+    .cont-slide-arrow {
         position: relative;
-        margin-bottom: -80px;
-    }
-    
-    .left-arrow
-    {
-        width: 24px;
-        height: 24px;
+        height: 255px;
     }
 
-    .right-arrow
-    {
-        width: 24px;
-        height: 24px;
+    .left-arrow {
+        width: 12px;
+        height: 20px;
     }
-    button 
-    {
+
+    .right-arrow {
+        width: 12px;
+        height: 20px;
+    }
+
+    button {
         border: none;
-        
+
     }
 
-    .housing-host
-    {
-        margin-bottom: -70px;
-    }
-    .buttonleftarrow
-    {
+    .housing-host {
         position: relative;
-        bottom: 150px;
-        background: transparent;
+        height: 32px;
+        display: flex;
+        align-items: center;
     }
-    .buttonrightarrow
-    {
-        position: relative;
-        bottom: 150px;
-        left: 265px;
+
+    .buttonleftarrow {
+        position: absolute;
+        bottom: 113px;
+        left: 15px;
         background: transparent;
     }
 
-    .housing-info
-    {
+    .buttonrightarrow {
+        position: absolute;
+        bottom: 113px;
+        right: 15px;
+        background: transparent;
+    }
+
+    .housing-info {
         display: flex;
         flex-direction: column;
         color: #FF6060;
     }
 
-    .tag-list
-    {
+    .tag-list {
         display: flex;
-        padding-left: 14px;
-        
+        padding-left: 0px;
+
         & li {
             background-color: #FF6060;
             border-radius: 7px;
-            width: min-content;
             height: 18px;
             padding: 2px 22px;
             color: white;
             font-size: 10px;
             line-height: 18px;
             margin-right: 10px;
-            
+
         }
     }
 
-    
-    
-    .expanded{
+    .housing-accordion {
+        width: 100%;
+        margin-bottom: 27px;
+
+        & .accordion {
+            width: 100%;
+            margin: 0px;
+        }
+    }
+
+    .expanded {
         & p {
             display: flex;
             flex-direction: column;
             padding: 10px 20px;
         }
     }
-}
 
+    //Responsive
+    @include desktop {
+        padding-left: 7%;
+        padding-right: 7%;
+        position: relative;
+
+        & img {
+            width: 100%;
+            margin-left: 0;
+            object-fit: cover;
+            height: 415px;
+        }
+
+        .buttonleftarrow {
+            bottom: 175px;
+            position: absolute;
+            left: 23px;
+        }
+
+        .buttonrightarrow {
+            bottom: 175px;
+            position: absolute;
+            right: 23px;
+        }
+
+        .left-arrow {
+            width: 46px;
+            height: 79px;
+        }
+
+        .right-arrow {
+            width: 46px;
+            height: 79px;
+        }
+
+        .slidenumber {
+            display: block;
+            position: relative;
+            bottom: 90px;
+            left: 180px;
+            color: white;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 500;
+            bottom: 70px;
+            left: 607px;
+        }
+
+        .cont-slide-arrow {
+            height: 415px;
+        }
+
+        h2 {
+            font-size: 36px;
+        }
+
+        .tag-list {
+            & li {
+                font-size: 14px;
+            }
+        }
+
+        .housing-host {
+            display: block;
+            position: absolute;
+            right: 100px;
+            top: 430px;
+            width: 195px;
+
+        }
+
+        .host-info {
+            height: 90px;
+            position: relative;
+            align-items: flex-start;
+
+            & p {
+                font-size: 18px;
+                width: 90px;
+                padding-left: 30px;
+                text-align: end;
+            }
+        }
+
+        .host-picture {
+            position: relative;
+            bottom: 65px;
+            width: 64px;
+            height: 64px;
+            left: 130px;
+        }
+
+        .rate {
+            height: 36px;
+            width: max-content;
+
+            & img {
+                width: 24px;
+                height: 24px;
+                margin-left: 15px;
+            }
+
+        }
+
+        .housing-accordion {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            margin-bottom: 50px;
+
+            & .accordion {
+                width: 582px;
+                margin: 0px;
+
+                &__title {
+                    font-size: 18px;
+                    padding: 20px 10px;
+                    border-radius: 10px;
+                }
+
+                &__content {
+                    font-size: 18px;
+                    padding-top: 25px;
+                    padding-bottom: 25px;
+                }
+            }
+        }
+
+    }
+}

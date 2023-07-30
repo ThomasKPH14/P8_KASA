@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import leftarrow from '../assets/arrow_left_ios-24px 2.png';
-import rightarrow from '../assets/arrow_forward_ios-24px 1.png';
+import leftarrow from '../assets/arrow_left.png';
+import rightarrow from '../assets/arrow_forward.png';
 
 const Slide = ({ data }) => {
   const slides = data.pictures;
@@ -15,15 +15,15 @@ const Slide = ({ data }) => {
   };
 
   return (
-    <div class="cont-slide-arrow">
+    <div className="cont-slide-arrow">
       <img src={slides[currentSlide]} alt={data.title} />
-      <button class="buttonleftarrow" onClick={handlePrevClick}>
+      <button className="buttonleftarrow" onClick={handlePrevClick}>
         <img src={leftarrow} alt="Left" className="left-arrow" /> 
       </button>
-      <button class="buttonrightarrow" onClick={handleNextClick}>
+      <button className="buttonrightarrow" onClick={handleNextClick}>
         <img src={rightarrow} alt="Right" className="right-arrow" /> 
       </button>
-      <p class="slidenumber">{`${currentSlide + 1} / ${slides.length}`}</p>
+      <p className="slidenumber">{`${currentSlide + 1} / ${slides.length}`}</p>
     </div>
   );
 };

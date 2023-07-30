@@ -1,11 +1,11 @@
 import React from 'react';
-import BannerImage from '../assets/Bannermobile.png';
+//import BannerImage from '../assets/Bannermobile.png';
 
 function Banner({ text, className }) {
   return (
     <div className={`banner ${className}`}>
       {className !== 'banner-about' ? (
-        <img className="banner__image" src={BannerImage} alt="Banner" />
+        <img className="banner__image" alt="" />
       ) : (
         <img className="banner__image" src="/assets/AboutBanner.png" alt="" />
       )}

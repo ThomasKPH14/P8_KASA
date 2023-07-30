@@ -12,30 +12,52 @@
   justify-content: space-between;
   align-items: flex-start;
   margin-right: 6px;
-  
-  & > .navbar-nav {
+
+  @include desktop {
+    margin-left: 0px;
+    padding-left: 7%;
+    padding-right: 7%;
+    text-align: end;
+    position: relative;
+    align-items: center;
+  }
+
+  &>.navbar-nav {
     display: flex;
     list-style-type: none;
     margin-top: 0;
     margin-bottom: 0;
-    
-    & > .navbar-item {
+    text-transform: uppercase;
+
+    @include desktop {
+      text-transform: none;
+    }
+
+    &>.navbar-item {
       width: 75px;
-      
-      & > .navbar-link {
+
+      @include desktop {
+        width: 170px;
+      }
+
+      &>.navbar-link {
         text-decoration: none;
         outline: none;
 
         h5 {
-          font-size: 12px; 
+          font-size: 12px;
           color: #FF6060;
           font-weight: 500;
+
+          @include desktop {
+            font-size: 24px;
+          }
         }
-        
+
         &.active h5 {
           text-decoration: underline;
         }
-        
+
         &:active,
         &:focus,
         &:hover {
@@ -45,6 +67,5 @@
         }
       }
     }
-    // Responsive
   }
 }

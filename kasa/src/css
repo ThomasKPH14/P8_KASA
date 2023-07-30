@@ -22,14 +22,35 @@
   align-items: flex-start;
   margin-right: 6px;
 }
+@media screen and (min-width: 1025px) {
+  .navbar-container {
+    margin-left: 0px;
+    padding-left: 7%;
+    padding-right: 7%;
+    text-align: end;
+    position: relative;
+    align-items: center;
+  }
+}
 .navbar-container > .navbar-nav {
   display: flex;
   list-style-type: none;
   margin-top: 0;
   margin-bottom: 0;
+  text-transform: uppercase;
+}
+@media screen and (min-width: 1025px) {
+  .navbar-container > .navbar-nav {
+    text-transform: none;
+  }
 }
 .navbar-container > .navbar-nav > .navbar-item {
   width: 75px;
+}
+@media screen and (min-width: 1025px) {
+  .navbar-container > .navbar-nav > .navbar-item {
+    width: 170px;
+  }
 }
 .navbar-container > .navbar-nav > .navbar-item > .navbar-link {
   text-decoration: none;
@@ -40,6 +61,11 @@
   color: #FF6060;
   font-weight: 500;
 }
+@media screen and (min-width: 1025px) {
+  .navbar-container > .navbar-nav > .navbar-item > .navbar-link h5 {
+    font-size: 24px;
+  }
+}
 .navbar-container > .navbar-nav > .navbar-item > .navbar-link.active h5 {
   text-decoration: underline;
 }
@@ -48,11 +74,24 @@
 }
 
 .banner {
+  margin-top: 22px;
+  margin-bottom: 22px;
+  position: relative;
+  height: 111px;
+}
+.banner__home {
   margin-left: 14px;
   margin-right: 11px;
-  margin-top: 22px;
-  margin-bottom: -88px;
+  background-color: rgba(0, 0, 0, 0.301);
+}
+.banner__home img {
+  background: url("../../assets/Bannermobile.png");
+  background-repeat: no-repeat;
+  background-size: cover;
   position: relative;
+  height: 111px;
+  width: 100%;
+  mix-blend-mode: darken;
 }
 .banner__image {
   border-radius: 10px;
@@ -60,27 +99,46 @@
   z-index: 1;
   width: 100%;
 }
-.banner::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 58%;
-  background-color: black;
-  border-radius: 10px;
-  opacity: 0.2;
-  z-index: 2;
-}
 .banner__text {
   color: white;
   font-family: "Montserrat", sans-serif;
   font-size: 24px;
   position: relative;
-  left: 15px;
+  left: 20px;
+  bottom: 110px;
   white-space: pre-line;
-  bottom: 115px;
   z-index: 3;
+}
+@media screen and (min-width: 1025px) {
+  .banner {
+    height: 223px;
+    width: 100%;
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+  .banner__home {
+    width: 100%;
+    height: 223px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+    border-radius: 25px;
+  }
+  .banner img {
+    background: url("../../assets/DesktopBanner.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    border-radius: 25px;
+  }
+  .banner__text {
+    font-size: 48px;
+    white-space: nowrap;
+    bottom: 190px;
+    left: 0px;
+  }
 }
 
 .accordion {
@@ -98,7 +156,7 @@
   height: 30px;
   width: 100%;
   background-color: #FF6060;
-  border-radius: 3px;
+  border-radius: 5px;
   border-style: none;
   cursor: pointer;
   margin-top: 25px;
@@ -181,22 +239,67 @@
   font-family: "Montserrat", sans-serif;
 }
 
+@media screen and (min-width: 1025px) {
+  .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 43px;
+    border-radius: 25px;
+    background: #F6F6F6;
+    padding: 56px 50px;
+    margin-bottom: 50px;
+  }
+  .gallery .container-product__overlay {
+    width: 340px;
+    height: 340px;
+  }
+  .gallery .container-product__image {
+    width: 340px;
+    height: 340px;
+  }
+  .gallery .container-product__title {
+    top: 285px;
+  }
+}
+
 body {
   margin: 0px;
+}
+@media screen and (min-width: 1025px) {
+  body {
+    padding-top: 45px;
+  }
+  body .body-page {
+    padding-left: 7%;
+    padding-right: 7%;
+  }
 }
 
 footer {
   display: flex;
   align-items: center;
+  justify-content: center;
   background-color: black;
   margin: auto;
   color: white;
   flex-direction: column;
   width: 100%;
   height: 209px;
-  padding-top: 66px;
   font-size: 12px;
   font-family: "Montserrat", sans-serif;
+}
+footer p {
+  width: 100px;
+}
+@media screen and (min-width: 1025px) {
+  footer {
+    height: 209px;
+  }
+  footer p {
+    font-size: 24px;
+    width: 380px;
+  }
 }
 
 .about-page__banner .banner {
@@ -208,6 +311,11 @@ footer {
   border-radius: 10px;
   width: 91%;
   height: 223px;
+}
+@media screen and (min-width: 1025px) {
+  .about-page__banner .banner {
+    border-radius: 25px;
+  }
 }
 
 .about-page .banner::before {
@@ -223,8 +331,59 @@ footer {
   z-index: 2;
 }
 
+@media screen and (min-width: 1025px) {
+  .about-page__container {
+    display: flex;
+    flex-direction: column;
+    padding-left: 7%;
+    padding-right: 7%;
+    margin-top: 38px;
+  }
+  .about-page__container .accordion {
+    margin-top: 0px;
+    width: 1023px;
+  }
+  .about-page__container .accordion__title {
+    font-size: 24px;
+    padding: 25px 20px 25px 15px;
+    margin-top: 10px;
+  }
+  .about-page__container .accordion__title span {
+    height: 32px;
+    width: 32px;
+  }
+  .about-page__container .accordion__content {
+    font-size: 18px;
+    padding: 20px 20px 25px 15px;
+  }
+  .about-page__container .accordion.expanded {
+    margin-bottom: 10px;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .about-page {
+    margin: 0px;
+    padding-left: 7%;
+    padding-right: 7%;
+  }
+  .about-page__banner .banner {
+    margin: 0px;
+    width: 100%;
+  }
+  .about-page .banner::before {
+    border-radius: 25px;
+  }
+  .about-page__banner img {
+    background: url("../../assets/DesktopBannerAbout.png");
+    background-position: 0% 50%;
+  }
+}
+
 .housing-container {
   margin-top: 20px;
+  margin-left: 14px;
+  margin-right: 14px;
   font-family: "Montserrat", sans-serif;
 }
 .housing-container li {
@@ -233,20 +392,16 @@ footer {
 .housing-container img {
   width: 345px;
   height: 255px;
-  margin-left: 15px;
   border-radius: 10px;
 }
 .housing-container h2 {
   font-size: 18px;
   font-weight: 500;
-  margin-left: 15px;
-  margin-right: 15px;
-  margin-top: 0px;
+  margin-bottom: 2px;
 }
 .housing-container h3 {
   font-size: 18px;
   font-weight: 500;
-  margin-left: 15px;
   margin-top: 0px;
   margin-bottom: 0px;
 }
@@ -256,17 +411,21 @@ footer {
   border-radius: 50%;
   position: relative;
   bottom: 42px;
-  left: 310px;
 }
 .housing-container .host-info {
   display: flex;
   flex-direction: column;
-  width: 20%;
+  height: 32px;
   flex-wrap: nowrap;
+  position: absolute;
+  text-align: end;
+  right: 0px;
+  align-items: flex-end;
 }
 .housing-container .host-info p {
-  margin-left: 264px;
+  padding-right: 43px;
   margin-top: 6px;
+  width: min-content;
   font-family: "Montserrat", sans-serif;
   font-size: 12px;
   font-style: normal;
@@ -274,16 +433,9 @@ footer {
   color: #FF6060;
 }
 .housing-container .slidenumber {
-  position: relative;
-  bottom: 90px;
-  left: 180px;
-  color: white;
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 500;
+  display: none;
 }
 .housing-container .rate img {
-  position: relative;
   bottom: 70px;
   width: 13px;
   height: 13px;
@@ -293,31 +445,35 @@ footer {
 }
 .housing-container .cont-slide-arrow {
   position: relative;
-  margin-bottom: -80px;
+  height: 255px;
 }
 .housing-container .left-arrow {
-  width: 24px;
-  height: 24px;
+  width: 12px;
+  height: 20px;
 }
 .housing-container .right-arrow {
-  width: 24px;
-  height: 24px;
+  width: 12px;
+  height: 20px;
 }
 .housing-container button {
   border: none;
 }
 .housing-container .housing-host {
-  margin-bottom: -70px;
+  position: relative;
+  height: 32px;
+  display: flex;
+  align-items: center;
 }
 .housing-container .buttonleftarrow {
-  position: relative;
-  bottom: 150px;
+  position: absolute;
+  bottom: 113px;
+  left: 15px;
   background: transparent;
 }
 .housing-container .buttonrightarrow {
-  position: relative;
-  bottom: 150px;
-  left: 265px;
+  position: absolute;
+  bottom: 113px;
+  right: 15px;
   background: transparent;
 }
 .housing-container .housing-info {
@@ -327,12 +483,11 @@ footer {
 }
 .housing-container .tag-list {
   display: flex;
-  padding-left: 14px;
+  padding-left: 0px;
 }
 .housing-container .tag-list li {
   background-color: #FF6060;
   border-radius: 7px;
-  width: min-content;
   height: 18px;
   padding: 2px 22px;
   color: white;
@@ -340,10 +495,124 @@ footer {
   line-height: 18px;
   margin-right: 10px;
 }
+.housing-container .housing-accordion {
+  width: 100%;
+  margin-bottom: 27px;
+}
+.housing-container .housing-accordion .accordion {
+  width: 100%;
+  margin: 0px;
+}
 .housing-container .expanded p {
   display: flex;
   flex-direction: column;
   padding: 10px 20px;
+}
+@media screen and (min-width: 1025px) {
+  .housing-container {
+    padding-left: 7%;
+    padding-right: 7%;
+    position: relative;
+  }
+  .housing-container img {
+    width: 100%;
+    margin-left: 0;
+    object-fit: cover;
+    height: 415px;
+  }
+  .housing-container .buttonleftarrow {
+    bottom: 175px;
+    position: absolute;
+    left: 23px;
+  }
+  .housing-container .buttonrightarrow {
+    bottom: 175px;
+    position: absolute;
+    right: 23px;
+  }
+  .housing-container .left-arrow {
+    width: 46px;
+    height: 79px;
+  }
+  .housing-container .right-arrow {
+    width: 46px;
+    height: 79px;
+  }
+  .housing-container .slidenumber {
+    display: block;
+    position: relative;
+    bottom: 90px;
+    left: 180px;
+    color: white;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    bottom: 70px;
+    left: 607px;
+  }
+  .housing-container .cont-slide-arrow {
+    height: 415px;
+  }
+  .housing-container h2 {
+    font-size: 36px;
+  }
+  .housing-container .tag-list li {
+    font-size: 14px;
+  }
+  .housing-container .housing-host {
+    display: block;
+    position: absolute;
+    right: 100px;
+    top: 430px;
+    width: 195px;
+  }
+  .housing-container .host-info {
+    height: 90px;
+    position: relative;
+    align-items: flex-start;
+  }
+  .housing-container .host-info p {
+    font-size: 18px;
+    width: 90px;
+    padding-left: 30px;
+    text-align: end;
+  }
+  .housing-container .host-picture {
+    position: relative;
+    bottom: 65px;
+    width: 64px;
+    height: 64px;
+    left: 130px;
+  }
+  .housing-container .rate {
+    height: 36px;
+    width: max-content;
+  }
+  .housing-container .rate img {
+    width: 24px;
+    height: 24px;
+    margin-left: 15px;
+  }
+  .housing-container .housing-accordion {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 50px;
+  }
+  .housing-container .housing-accordion .accordion {
+    width: 582px;
+    margin: 0px;
+  }
+  .housing-container .housing-accordion .accordion__title {
+    font-size: 18px;
+    padding: 20px 10px;
+    border-radius: 10px;
+  }
+  .housing-container .housing-accordion .accordion__content {
+    font-size: 18px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
 }
 
 .error-container {

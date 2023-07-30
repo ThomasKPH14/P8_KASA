@@ -1,7 +1,6 @@
 .container-product {
     margin-left: 14px;
     margin-right: 11px;
-    // flex-direction: column;
     position: relative;
   
     &__overlay {
@@ -33,6 +32,37 @@
       top: 199px;
       left: 16px;
       font-family: 'Montserrat', sans-serif;
+    }
+  }
+
+  .gallery{
+
+    // Responsive 
+    @include desktop {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin-top: 43px;
+        border-radius: 25px;
+        background: #F6F6F6;
+        padding: 56px 50px;
+        margin-bottom: 50px;
+
+        .container-product {
+          &__overlay {
+            width: 340px;
+            height: 340px;
+          }
+
+          &__image {
+            width: 340px;
+            height: 340px;
+          }
+
+          &__title {
+            top: 285px;
+          }
+        }
     }
   }
   

@@ -1,3 +1,14 @@
 body {
     margin: 0px;
+
+    // Responsive
+    @include desktop {
+        padding-top: 45px ;
+
+        .body-page {
+            padding-left: 7%;
+            padding-right: 7%;
+        }
+    }
 }
+

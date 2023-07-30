@@ -30,9 +30,9 @@ function Housing() {
         <Host host={host} />
         <Ratings rating={rating} />
       </div>
-      <div>
-        <Collapse title={'Description'} content={description} />
-        <Collapse title={'Equipements'} content={equipments.map((equipment, index) => (
+      <div className='housing-accordion'>
+        <Collapse className='housing-accordion__info' title={'Description'} content={description} />
+        <Collapse className='housing-accordion__info' title={'Equipements'} content={equipments.map((equipment, index) => (
           <li key={equipment}>{equipment}</li>))} />
       </div>
 

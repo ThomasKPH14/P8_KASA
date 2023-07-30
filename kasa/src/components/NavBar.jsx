@@ -12,13 +12,13 @@ function Navbar() {
         </NavLink>
         <ul className="navbar-nav">
           <li className="navbar-item">
-            <NavLink to="/" className="navbar-link">
-              <h5>ACCUEIL</h5>
+            <NavLink exact to="/" className="navbar-link" activeClassName="active">
+              <h5>Accueil</h5>
             </NavLink>
           </li>
           <li className="navbar-item">
-            <NavLink to="/A-propos" className="navbar-link">
-              <h5>A PROPOS</h5>
+            <NavLink to="/A-propos" className="navbar-link" activeClassName="active">
+              <h5>A Propos</h5>
             </NavLink>
           </li>
         </ul>

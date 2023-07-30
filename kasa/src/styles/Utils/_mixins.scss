@@ -1,0 +1,13 @@
+// responsive
+@mixin desktop {
+    @media screen and (min-width: map-get($map: $breakpoints, $key: desktop)) {
+      @content;
+    }
+  }
+
+
+@mixin tablet {
+    @media (min-width:768px) and (max-width:1024px) {
+      @content;
+    }
+  }
