@@ -140,6 +140,38 @@
     left: 0px;
   }
 }
+@media (min-width: 768px) and (max-width: 1024px) {
+  .banner {
+    height: 223px;
+    width: 100%;
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+  .banner__home {
+    width: 97%;
+    height: 223px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+    border-radius: 25px;
+    margin-bottom: 22px;
+  }
+  .banner img {
+    background: url("../../assets/DesktopBanner.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    border-radius: 25px;
+  }
+  .banner__text {
+    font-size: 48px;
+    white-space: nowrap;
+    bottom: 190px;
+    left: 0px;
+  }
+}
 
 .accordion {
   font-family: "Montserrat", sans-serif;
@@ -262,6 +294,31 @@
     top: 285px;
   }
 }
+@media (min-width: 768px) and (max-width: 1024px) {
+  .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 43px;
+    border-radius: 25px;
+    background: #F6F6F6;
+    padding: 56px 50px;
+    margin-bottom: 50px;
+    margin-left: 14px;
+    margin-right: 11px;
+  }
+  .gallery .container-product__overlay {
+    width: 340px;
+    height: 340px;
+  }
+  .gallery .container-product__image {
+    width: 340px;
+    height: 340px;
+  }
+  .gallery .container-product__title {
+    top: 285px;
+  }
+}
 
 body {
   margin: 0px;
@@ -317,6 +374,11 @@ footer p {
     border-radius: 25px;
   }
 }
+@media (min-width: 768px) and (max-width: 1024px) {
+  .about-page__banner .banner img {
+    border-radius: 10px;
+  }
+}
 
 .about-page .banner::before {
   content: "";
@@ -341,7 +403,6 @@ footer p {
   }
   .about-page__container .accordion {
     margin-top: 0px;
-    width: 1023px;
   }
   .about-page__container .accordion__title {
     font-size: 24px;
@@ -352,7 +413,7 @@ footer p {
     height: 32px;
     width: 32px;
   }
-  .about-page__container .accordion__content {
+  Z .about-page__container .accordion__content {
     font-size: 18px;
     padding: 20px 20px 25px 15px;
   }
@@ -379,6 +440,21 @@ footer p {
     background-position: 0% 50%;
   }
 }
+@media (min-width: 768px) and (max-width: 1024px) {
+  .about-page {
+    margin: 0px;
+    padding-left: 7%;
+    padding-right: 7%;
+  }
+  .about-page__banner .banner {
+    margin: 0px;
+    width: 100%;
+  }
+  .about-page__banner img {
+    background: url("../../assets/DesktopBannerAbout.png");
+    background-position: 0% 50%;
+  }
+}
 
 .housing-container {
   margin-top: 20px;
@@ -390,7 +466,8 @@ footer p {
   list-style: none;
 }
 .housing-container img {
-  width: 345px;
+  width: 100%;
+  object-fit: cover;
   height: 255px;
   border-radius: 10px;
 }
@@ -614,6 +691,12 @@ footer p {
     padding-bottom: 25px;
   }
 }
+@media (min-width: 768px) and (max-width: 1024px) {
+  .housing-container img {
+    width: 100%;
+    object-fit: cover;
+  }
+}
 
 .error-container {
   display: flex;
@@ -641,6 +724,18 @@ footer p {
   color: #FF6060;
   font-size: 13px;
   font-family: "Montserrat", sans-serif;
+}
+@media screen and (min-width: 1025px) {
+  .error-container__title {
+    font-size: 288px;
+  }
+  .error-container__text {
+    font-size: 36px;
+    width: 872px;
+  }
+  .error-container__url {
+    font-size: 18px;
+  }
 }
 
 /*# sourceMappingURL=css.map */

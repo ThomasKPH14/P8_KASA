@@ -29,4 +29,20 @@
         font-family: 'Montserrat', sans-serif;
         
     }
+
+    //Responsive
+    @include desktop {
+        &__title {
+            font-size: 288px;
+        }
+
+        &__text {
+            font-size: 36px;
+            width: 872px;
+        }
+        
+        &__url {
+            font-size: 18px;
+        }
+    }
 }
