@@ -83,21 +83,15 @@
   margin-left: 14px;
   margin-right: 11px;
   background-color: rgba(0, 0, 0, 0.301);
-}
-.banner__home img {
-  background: url("../../assets/Bannermobile.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-  height: 111px;
-  width: 100%;
-  mix-blend-mode: darken;
+  border-radius: 10px;
 }
 .banner__image {
-  border-radius: 10px;
-  position: relative;
-  z-index: 1;
+  mix-blend-mode: darken;
+  height: 111px;
   width: 100%;
+  border-radius: 10px;
+  object-position: center;
+  object-fit: cover;
 }
 .banner__text {
   color: white;
@@ -126,9 +120,6 @@
     border-radius: 25px;
   }
   .banner img {
-    background: url("../../assets/DesktopBanner.png");
-    background-repeat: no-repeat;
-    background-size: cover;
     height: 100%;
     width: 100%;
     border-radius: 25px;
@@ -157,10 +148,7 @@
     border-radius: 25px;
     margin-bottom: 22px;
   }
-  .banner img {
-    background: url("../../assets/DesktopBanner.png");
-    background-repeat: no-repeat;
-    background-size: cover;
+  .banner__image {
     height: 100%;
     width: 100%;
     border-radius: 25px;
@@ -360,14 +348,29 @@ footer p {
 }
 
 .about-page__banner .banner {
-  background-image: url("/assets/AboutBanner.png");
-  background-size: cover;
   margin: auto;
   margin-top: 15px;
   margin-bottom: 20px;
   border-radius: 10px;
   width: 91%;
   height: 223px;
+}
+.about-page__banner .banner .banner__image {
+  height: 90%;
+  transform: scale(1.1);
+  position: relative;
+  width: 91%;
+  left: 4.3%;
+  top: 4.3%;
+}
+@media screen and (min-width: 1025px) {
+  .about-page__banner .banner .banner__image {
+    height: 100%;
+    transform: none;
+    width: 100%;
+    left: 0;
+    top: 0;
+  }
 }
 @media screen and (min-width: 1025px) {
   .about-page__banner .banner {
@@ -413,7 +416,7 @@ footer p {
     height: 32px;
     width: 32px;
   }
-  Z .about-page__container .accordion__content {
+  .about-page__container .accordion__content {
     font-size: 18px;
     padding: 20px 20px 25px 15px;
   }

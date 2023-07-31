@@ -1,12 +1,26 @@
 .about-page__banner .banner {
-  background-image: url('/assets/AboutBanner.png');
-  background-size: cover;
   margin: auto;
   margin-top: 15px;
   margin-bottom: 20px;
   border-radius: 10px;
   width: 91%;
   height: 223px;
+
+  & .banner__image{
+    height: 90%;
+    transform: scale(1.1);
+    position: relative;
+    width: 91%;
+    left: 4.3%;
+    top: 4.3%;
+    @include desktop {
+      height: 100%;
+      transform: none;
+      width: 100%;
+      left: 0;
+      top: 0;
+    }
+  }
   @include desktop {
     border-radius: 25px;
   }
@@ -53,7 +67,7 @@
           height: 32px;
           width: 32px;
         }
-      }Z
+      }
 
       &__content {
         font-size: 18px;

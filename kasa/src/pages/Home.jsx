@@ -1,10 +1,12 @@
+// Importation des dépendances nécessaires.
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-
+// Importation des composants personnalisés.
 import Banner from '../components/banner';
 import Cards from '../components/Cards';
+// Importation des données des logements à partir d'un fichier JSON.
 import logements from '../app/logements.json';
-
+// Déclaration du composant Home
 const Home = () => {
   const bannerText = `Chez vous,\npartout et ailleurs`;
 
@@ -25,5 +27,5 @@ const Home = () => {
     </div>
   );
 };
-
+// Le composant Home est exporté pour pouvoir être utilisé dans d'autres fichiers.
 export default Home;

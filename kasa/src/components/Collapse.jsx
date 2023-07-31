@@ -1,5 +1,6 @@
+// Importation des hooks React nécessaires : useState pour la gestion de l'état.
 import React, { useState } from 'react';
-
+// Définition du composant Accordion
 function Accordion({ title, content }) {
   const [isExpanded, setIsExpanded] = useState(false);
 
@@ -17,5 +18,5 @@ function Accordion({ title, content }) {
     </div>
   );
 }
-
+// Exportation du composant Accordion pour qu'il puisse être utilisé dans d'autres fichiers.
 export default Accordion;

@@ -1,5 +1,6 @@
+// Importation React
 import React from 'react';
-
+// Déclaration de la fonction Error404 qui retourne un composant React.
 function Error404() {
   return (
   <div className='main-page'>
@@ -11,5 +12,5 @@ function Error404() {
   </div>
   );
 }
-
+// Exportation de la fonction Error404 pour qu'elle puisse être utilisée dans d'autres fichiers.
 export default Error404;

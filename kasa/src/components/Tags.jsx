@@ -1,5 +1,6 @@
+// Importer la bibliothèque React.
 import React from 'react'
-
+// Définir un composant fonctionnel Tags qui prend des "tags" comme props
 function Tags({ tags }) {
   return (
     <div className="tag-container">
@@ -11,5 +12,5 @@ function Tags({ tags }) {
     </div>
   )
 }
-
+// Exporter le composant Tags pour qu'il puisse être utilisé dans d'autres fichiers.
 export default Tags

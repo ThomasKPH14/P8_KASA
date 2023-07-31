@@ -1,3 +1,4 @@
+// Importation des dépendances et composants nécessaires.
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import Logements from '../app/logements.json';
@@ -8,6 +9,7 @@ import Host from '../components/Host';
 import Slide from '../components/SlideShow';
 import Collapse from '../components/Collapse';
 
+// Déclaration du composant Housing
 function Housing() {
   const { id } = useParams();
   const logement = Logements.find(logement => logement.id === id);
@@ -17,7 +19,7 @@ function Housing() {
   }
 
   const { title, location, rating, host, equipments, description, tags } = logement;
-
+ // Affichage du logement.
   return (
     <div className='housing-container'>
       <Slide data={logement} />
@@ -39,5 +41,5 @@ function Housing() {
     </div>
   );
 }
-
+// Exportation du composant Housing pour qu'il puisse être utilisé dans d'autres fichiers.
 export default Housing;

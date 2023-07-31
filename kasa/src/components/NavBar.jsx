@@ -1,25 +1,42 @@
+// Importation des bibliothèques et des composants nécessaires
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { useMatch, NavLink } from 'react-router-dom'; // useMatch pour vérifier si le chemin actuel correspond à l'URL actuelle
+import Logo from '../assets/Kasalogo.png'; // Importation du logo
 
-import Logo from '../assets/Kasalogo.png';
+// Création du composant CustomNavLink qui utilisera le hook useMatch
+function CustomNavLink({ to, children, activeClassName, ...props }) {
+  const match = useMatch(to); // Utilisation du hook useMatch pour vérifier si le chemin correspond à l'URL actuelle
 
+  // Rendu du composant NavLink. Si le chemin correspond à l'URL actuelle, la classe activeClassName est appliquée, sinon aucune classe n'est appliquée
+  return (
+    <NavLink 
+      to={to} 
+      className={match ? activeClassName : ''}
+      {...props}
+    >
+      {children}
+    </NavLink>
+  );
+}
+
+// Le composant Navbar 
 function Navbar() {
   return (
     <nav className="navbar">
       <div className="navbar-container">
-        <NavLink to="/" className="navbar-logo">
+        <CustomNavLink to="/" className="navbar-logo"> {/* Lien vers la page d'accueil avec le logo */}
           <img src={Logo} alt="Logo" className="logo-image" />
-        </NavLink>
+        </CustomNavLink>
         <ul className="navbar-nav">
           <li className="navbar-item">
-            <NavLink exact to="/" className="navbar-link" activeClassName="active">
+            <CustomNavLink to="/" className="navbar-link" activeClassName="active"> {/* Lien vers la page d'accueil, qui devient 'active' lorsque cette route est choisie */}
               <h5>Accueil</h5>
-            </NavLink>
+            </CustomNavLink>
           </li>
           <li className="navbar-item">
-            <NavLink to="/A-propos" className="navbar-link" activeClassName="active">
+            <CustomNavLink to="/A-propos" className="navbar-link" activeClassName="active"> {/* Lien vers la page À propos, qui devient 'active' lorsque cette route est choisie */}
               <h5>A Propos</h5>
-            </NavLink>
+            </CustomNavLink>
           </li>
         </ul>
       </div>
@@ -27,4 +44,5 @@ function Navbar() {
   );
 }
 
+// Exportation du composant Navbar pour utilisation dans d'autres fichiers
 export default Navbar;

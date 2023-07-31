@@ -1,5 +1,6 @@
+// Importation React
 import React from 'react';
-
+// Définition du composant ContainerProduct
 function ContainerProduct({ cover, title }) {
   return (
     <div className="container-product">
@@ -9,5 +10,5 @@ function ContainerProduct({ cover, title }) {
     </div>
   );
 }
-
+// Exportation du composant ContainerProduct pour qu'il puisse être utilisé dans d'autres fichiers.
 export default ContainerProduct;

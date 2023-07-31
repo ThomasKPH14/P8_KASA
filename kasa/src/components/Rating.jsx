@@ -1,7 +1,8 @@
+// Importer les images utilisées pour représenter les étoiles
 import fullstart from "../assets/Ratingfull.png";
 import start from "../assets/Rating.png";
 
-
+// Initialiser un tableau d'étoiles
 function Ratings({ rating }) {
 
     // for ratings Numbers
@@ -29,5 +30,5 @@ function Ratings({ rating }) {
         </div>
     );
 }
-
+// Exporter le composant Ratings pour qu'il puisse être utilisé dans d'autres fichiers.
 export default Ratings;
